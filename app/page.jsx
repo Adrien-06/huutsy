@@ -1,21 +1,47 @@
-'use client';
+import React from "react";
+import { motion } from "framer-motion";
 
-import { motion } from 'framer-motion';
-
-export default function Page() {
+export default function HuutsyLanding() {
   const features = [
-    { title: 'Original Designs', desc: 'Artwork created in-house. No stock art. No copyright issues.' },
-    { title: 'Print-Ready Files', desc: '4500×5400 PNG, transparent background, color-checked.' },
-    { title: 'Niche Strategy', desc: 'Trend research + evergreen themes tailored for Amazon Merch.' },
+    {
+      title: "Original Artwork",
+      desc: "Concepts crafted in‑house, from sketch to final master. No stock art.",
+    },
+    {
+      title: "Print‑Perfect Files",
+      desc: "4500×5400 PNG with transparent background. Vector on request.",
+    },
+    {
+      title: "Brand‑Ready Delivery",
+      desc: "Mockups, export presets, and a simple license for commercial use.",
+    },
   ];
 
   const portfolio = [
-    { title: 'Retro Sunrise', src: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop' },
-    { title: 'Minimal Japandi', src: 'https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1200&auto=format&fit=crop' },
-    { title: 'Bold Typography', src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop' },
-    { title: 'Nature Line Art', src: 'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop' },
-    { title: 'Y2K Neon', src: 'https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=1200&auto=format&fit=crop' },
-    { title: 'Vintage Badge', src: 'https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?q=80&w=1200&auto=format&fit=crop' },
+    {
+      title: "Retro Sunrise",
+      src: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Minimal Japandi",
+      src: "https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Bold Typography",
+      src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Nature Line Art",
+      src: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Y2K Neon",
+      src: "https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=1200&auto=format&fit=crop",
+    },
+    {
+      title: "Vintage Badge",
+      src: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?q=80&w=1200&auto=format&fit=crop",
+    },
   ];
 
   return (
@@ -25,8 +51,8 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <a href="#home" className="font-black tracking-tight text-2xl">HUUTSY</a>
           <nav className="hidden md:flex gap-6 text-sm">
-            <a href="#work" className="hover:opacity-70">Portfolio</a>
-            <a href="#about" className="hover:opacity-70">À propos</a>
+            <a href="#work" className="hover:opacity-70">Work</a>
+            <a href="#about" className="hover:opacity-70">About</a>
             <a href="#process" className="hover:opacity-70">Process</a>
             <a href="#contact" className="hover:opacity-70">Contact</a>
           </nav>
@@ -39,16 +65,16 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
           <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Creative T-Shirt Designs for <span className="underline decoration-amber-400 underline-offset-4">Merch</span>
+              Modern T‑Shirt Design Studio
             </h1>
             <p className="mt-5 text-neutral-600 text-lg">
-              Huutsy est un studio créatif basé en Andorre. Nous concevons des visuels originaux, prêts à l&apos;impression, optimisés pour Amazon Merch on Demand & POD.
+              Huutsy is a creative studio crafting original, print‑ready graphics for apparel brands and print‑on‑demand projects. From clean type to bold illustrations, we deliver files that look as good on fabric as they do on screen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#work" className="rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">Voir le portfolio</a>
-              <a href="#contact" className="rounded-2xl px-5 py-3 border border-neutral-900 hover:bg-neutral-900 hover:text-white">Demander un devis</a>
+              <a href="#work" className="rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">See portfolio</a>
+              <a href="#contact" className="rounded-2xl px-5 py-3 border border-neutral-900 hover:bg-neutral-900 hover:text-white">Request a quote</a>
             </div>
-            <p className="mt-4 text-sm text-neutral-500">EN/FR/ES available • 48h quick turnarounds</p>
+            <p className="mt-4 text-sm text-neutral-500">24–48h previews • EN/FR/ES support</p>
           </motion.div>
           <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
@@ -95,28 +121,26 @@ export default function Page() {
       <section id="about" className="py-20 border-t border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold">À propos</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">About Huutsy</h2>
             <p className="mt-4 text-neutral-700 leading-relaxed">
-              Huutsy est une marque gérée par AG Summit Ventures (Andorre). Nous créons des collections orientées tendances
-              (Y2K, Japandi, rétro, typographies expressives) et des visuels evergreen. Chaque design est pensé pour la
-              lisibilité à l&apos;impression, la limitation des couleurs et la cohérence de marque.
+              Huutsy is a design label operated by AG Summit Ventures (Andorra). We build capsule collections around trends (Y2K, Japandi, retro, expressive type) and timeless themes. Every graphic is crafted for clarity on fabric, limited color counts, and a consistent brand voice.
             </p>
             <ul className="mt-6 space-y-2 text-neutral-700 text-sm list-disc pl-5">
-              <li>Fichiers fournis : PNG 4500×5400 / SVG / AI sur demande</li>
-              <li>Mockups inclus (merch & lifestyle)</li>
-              <li>Usage commercial complet & respect strict du copyright</li>
+              <li>Deliverables: 4500×5400 PNG / SVG / AI on request</li>
+              <li>Mockups included (lifestyle & flat)</li>
+              <li>Commercial license • Strict copyright compliance</li>
             </ul>
           </div>
           <div className="p-6 rounded-3xl border bg-neutral-50">
             <h3 className="font-semibold">Services</h3>
             <ul className="mt-3 text-sm text-neutral-700 space-y-2">
-              <li>• Packs de 10 designs Merch</li>
-              <li>• Re-design / vectorisation de logos</li>
-              <li>• Audit de listings (titres, bullet points, tags)</li>
-              <li>• Direction artistique de collections</li>
+              <li>• 10‑design starter packs</li>
+              <li>• Logo refresh & vectorization</li>
+              <li>• Listing audit (titles, bullets, tags)</li>
+              <li>• Art direction for collections</li>
             </ul>
             <div className="mt-6">
-              <a href="#contact" className="inline-block rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">Parler de votre projet</a>
+              <a href="#contact" className="inline-block rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">Start a project</a>
             </div>
           </div>
         </div>
@@ -125,9 +149,9 @@ export default function Page() {
       {/* Process */}
       <section id="process" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Process en 4 étapes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Process in 4 steps</h2>
           <ol className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-            {['Brief & niches','Moodboard & pistes','Design & tests print','Livraison & mockups'].map((step, i) => (
+            {["Brief & niches","Moodboard & directions","Design & print checks","Delivery & mockups"].map((step, i) => (
               <li key={i} className="p-5 rounded-3xl border bg-white">
                 <div className="w-8 h-8 rounded-full border flex items-center justify-center font-semibold mb-3">{i+1}</div>
                 <p className="text-neutral-700">{step}</p>
@@ -140,8 +164,8 @@ export default function Page() {
       {/* Contact */}
       <section id="contact" className="py-20 border-t border-neutral-200 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">Discutons ✉️</h2>
-          <p className="mt-4 text-neutral-700">Dites-nous ce que vous voulez créer et nous revenons sous 24–48h.</p>
+          <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
+          <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             <a href="mailto:support@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">support@huutsy.com</a>
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
@@ -151,6 +175,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
           <p>© {new Date().getFullYear()} Huutsy. All rights reserved.</p>
