@@ -10,10 +10,10 @@ export default function Page() {
   ];
 
   const shots = [
-    { title: 'Type & Layout', src: 'https://i.ibb.co/3mKN50qf/huutsy-com-1.png' },
+    { title: 'Type & Layout', src: 'https://i.ibb.co/HLLcGkcS/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post.png' },
     { title: 'Retro Color', src: 'https://i.ibb.co/5tThs3V/huutsy-com-5.png' },
     { title: 'Minimal Lines', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
-    { title: 'Nature Motifs', src: 'https://i.ibb.co/YBDTycZw/huutsy-com-3.png' },
+    { title: 'Nature Motifs', src: 'img src="https://i.ibb.co/0jtLhZqk/huutsy-com-8.png' },
     { title: 'Bold Graphics', src: 'https://i.ibb.co/93Vc78ZP/huutsy-com-6.png' },
     { title: 'Y2K Neon', src: 'https://i.ibb.co/j9vb0kt2/huutsy-com-7.png' },
   ];
@@ -23,7 +23,7 @@ export default function Page() {
       {/* Nav */}
       <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#home" className="font-black tracking-tight text-2xl">HUUTSY</a>
+          <a href="#home" className="font-black tracking-tight text-2xl">huutsy</a>
           <nav className="hidden md:flex gap-6 text-sm">
             <a href="#work" className="hover:opacity-70">Work</a>
             <a href="#about" className="hover:opacity-70">About</a>
@@ -42,7 +42,7 @@ export default function Page() {
               Modern T-Shirt Design Studio
             </h1>
             <p className="mt-5 text-neutral-600 text-lg">
-              Huutsy is a creative studio crafting original, print-ready graphics for apparel brands and
+              huutsy is a creative studio crafting original, print-ready graphics for apparel brands and
               print-on-demand projects. From clean type to bold illustrations, we deliver files that look as good
               on fabric as they do on screen.
             </p>
@@ -56,7 +56,7 @@ export default function Page() {
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
               {/* FIXED IMG TAG */}
               <img
-                src="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png"
+                src="https://i.ibb.co/j9pRY4Nr/Design-sans-titre-1.png"
                 alt="Huutsy hero"
                 className="w-full h-full object-cover"
               />
@@ -104,13 +104,17 @@ export default function Page() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold">About Huutsy</h2>
             <p className="mt-4 text-neutral-700 leading-relaxed">
-              We build capsule collections around trends (Y2K, Japandi, retro, expressive type) and timeless themes.
-              Every graphic is crafted for clarity on fabric, limited color counts, and a consistent brand voice.
+              	Huutsy is a dedicated design studio specialized in high-impact apparel graphics for on-demand printing platforms. 
+  		Every file is built with industry-standard dimensions, optimized color palettes, and perfect scaling to ensure 
+  		consistent, professional results across a wide range of garments. 
+  		Our approach blends creative trend research with technical precision, making sure each design is ready for 
+  		immediate upload and meets strict print requirements from day one.
             </p>
             <ul className="mt-6 space-y-2 text-neutral-700 text-sm list-disc pl-5">
-              <li>Deliverables: 4500×5400 PNG / SVG / AI</li>
-              <li>Mockups included (lifestyle & flat)</li>
-              <li>Commercial license • Strict copyright compliance</li>
+		<li>Deliverables: 4500×5400 px PNG (transparent) / Vector (SVG, AI) on request</li>
+  		<li>Files tested for clarity, contrast, and compliance with content guidelines</li>
+  		<li>Lifestyle & flat mockups included for instant listing visuals</li>
+  		<li>Commercial license with full rights for resale on approved marketplaces</li>
             </ul>
           </div>
           <div className="p-6 rounded-3xl border bg-neutral-50">
