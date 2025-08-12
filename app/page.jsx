@@ -1,47 +1,21 @@
-import React from "react";
-import { motion } from "framer-motion";
+'use client';
 
-export default function HuutsyLanding() {
+import { motion } from 'framer-motion';
+
+export default function Page() {
   const features = [
-    {
-      title: "Original Artwork",
-      desc: "Concepts crafted in‑house, from sketch to final master. No stock art.",
-    },
-    {
-      title: "Print‑Perfect Files",
-      desc: "4500×5400 PNG with transparent background. Vector on request.",
-    },
-    {
-      title: "Brand‑Ready Delivery",
-      desc: "Mockups, export presets, and a simple license for commercial use.",
-    },
+    { title: 'Original Artwork', desc: 'Concepts crafted in‑house, from sketch to final master. No stock art.' },
+    { title: 'Print‑Perfect Files', desc: '4500×5400 PNG with transparent background. Vector/SVG on request.' },
+    { title: 'Brand‑Ready Delivery', desc: 'Mockups, export presets, and a simple commercial license.' },
   ];
 
-  const portfolio = [
-    {
-      title: "Retro Sunrise",
-      src: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Minimal Japandi",
-      src: "https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Bold Typography",
-      src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Nature Line Art",
-      src: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Y2K Neon",
-      src: "https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      title: "Vintage Badge",
-      src: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?q=80&w=1200&auto=format&fit=crop",
-    },
+  const shots = [
+    { title: 'Type & Layout', src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Retro Color', src: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Minimal Lines', src: 'https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Nature Motifs', src: 'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Bold Graphics', src: 'https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Y2K Neon', src: 'https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=1600&auto=format&fit=crop' },
   ];
 
   return (
@@ -68,7 +42,9 @@ export default function HuutsyLanding() {
               Modern T‑Shirt Design Studio
             </h1>
             <p className="mt-5 text-neutral-600 text-lg">
-              Huutsy is a creative studio crafting original, print‑ready graphics for apparel brands and print‑on‑demand projects. From clean type to bold illustrations, we deliver files that look as good on fabric as they do on screen.
+              Huutsy is a creative studio crafting original, print‑ready graphics for apparel brands and
+              print‑on‑demand projects. From clean type to bold illustrations, we deliver files that look as good
+              on fabric as they do on screen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#work" className="rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">See portfolio</a>
@@ -78,7 +54,7 @@ export default function HuutsyLanding() {
           </motion.div>
           <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1400&auto=format&fit=crop" alt="Huutsy mockups" className="w-full h-full object-cover"/>
+              <img src="https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1600&auto=format&fit=crop" alt="Huutsy hero" className="w-full h-full object-cover"/>
             </div>
           </motion.div>
         </div>
@@ -104,12 +80,12 @@ export default function HuutsyLanding() {
             <a href="#contact" className="text-sm underline underline-offset-4">Request similar designs</a>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {portfolio.map((p, i) => (
+            {shots.map((p, i) => (
               <motion.figure key={i} initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.5, delay:i*0.03}} className="group overflow-hidden rounded-3xl border bg-white">
                 <img src={p.src} alt={p.title} className="w-full h-64 object-cover group-hover:scale-105 transition"/>
                 <figcaption className="p-3 text-sm text-neutral-600 flex items-center justify-between">
                   <span>{p.title}</span>
-                  <span className="opacity-60">PNG • 4500×5400</span>
+                  <span className="opacity-60">Print‑ready</span>
                 </figcaption>
               </motion.figure>
             ))}
@@ -123,10 +99,11 @@ export default function HuutsyLanding() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold">About Huutsy</h2>
             <p className="mt-4 text-neutral-700 leading-relaxed">
-              Huutsy is a design label operated by AG Summit Ventures (Andorra). We build capsule collections around trends (Y2K, Japandi, retro, expressive type) and timeless themes. Every graphic is crafted for clarity on fabric, limited color counts, and a consistent brand voice.
+              We build capsule collections around trends (Y2K, Japandi, retro, expressive type) and timeless themes.
+              Every graphic is crafted for clarity on fabric, limited color counts, and a consistent brand voice.
             </p>
             <ul className="mt-6 space-y-2 text-neutral-700 text-sm list-disc pl-5">
-              <li>Deliverables: 4500×5400 PNG / SVG / AI on request</li>
+              <li>Deliverables: 4500×5400 PNG / SVG / AI</li>
               <li>Mockups included (lifestyle & flat)</li>
               <li>Commercial license • Strict copyright compliance</li>
             </ul>
@@ -136,7 +113,7 @@ export default function HuutsyLanding() {
             <ul className="mt-3 text-sm text-neutral-700 space-y-2">
               <li>• 10‑design starter packs</li>
               <li>• Logo refresh & vectorization</li>
-              <li>• Listing audit (titles, bullets, tags)</li>
+              <li>• Listing copy & keyword audit</li>
               <li>• Art direction for collections</li>
             </ul>
             <div className="mt-6">
@@ -171,11 +148,10 @@ export default function HuutsyLanding() {
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
             <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
-          <p className="mt-6 text-xs text-neutral-500">AG Summit Ventures • Andorra</p>
+          <p className="mt-6 text-xs text-neutral-500">Huutsy • All rights reserved</p>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
           <p>© {new Date().getFullYear()} Huutsy. All rights reserved.</p>

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Huutsy — Creative T‑Shirt Designs",
-  description: "Huutsy est un studio créatif basé en Andorre. Visuels originaux, prêts à l'impression, optimisés pour Amazon Merch on Demand.",
+  description: "Huutsy est un studio créatif basé en Andorre. Visuels originaux, prêts à l'impression",
   metadataBase: new URL("https://huutsy.com")
 };
 
