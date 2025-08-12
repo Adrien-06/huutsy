@@ -10,12 +10,12 @@ export default function Page() {
   ];
 
   const shots = [
-    { title: 'Type & Layout', src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop' },
-    { title: 'Retro Color', src: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Type & Layout', src: 'https://i.ibb.co/3mKN50qf/huutsy-com-1.png' },
+    { title: 'Retro Color', src: 'https://i.ibb.co/5tThs3V/huutsy-com-5.png' },
     { title: 'Minimal Lines', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
-    { title: 'Nature Motifs', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png" alt="huutsy-com-6' },
-    { title: 'Bold Graphics', src: 'https://i.ibb.co/YBDTycZw/huutsy-com-3.png" alt="huutsy-com-3' },
-    { title: 'Y2K Neon', src: 'https://i.ibb.co/3mKN50qf/huutsy-com-1.png" alt="huutsy-com-1' },
+    { title: 'Nature Motifs', src: 'https://i.ibb.co/YBDTycZw/huutsy-com-3.png' },
+    { title: 'Bold Graphics', src: 'https://i.ibb.co/93Vc78ZP/huutsy-com-6.png' },
+    { title: 'Y2K Neon', src: 'https://i.ibb.co/j9vb0kt2/huutsy-com-7.png' },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Page() {
           </motion.div>
           <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
-              <img src="<a href="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png" alt="Design-sans-titre" border="0"></a>" alt="Huutsy hero" className="w-full h-full object-cover"/>
+              <img src="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png" alt="Design-sans-titre" border="0"></a>" alt="Huutsy hero" className="w-full h-full object-cover"/>
             </div>
           </motion.div>
         </div>
@@ -144,9 +144,8 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
           <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href="mailto:support@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">support@huutsy.com</a>
+            <a href="mailto:contact@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">support@huutsy.com</a>
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
-            <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
           <p className="mt-6 text-xs text-neutral-500">Huutsy • All rights reserved</p>
         </div>
