@@ -13,9 +13,19 @@ export default function Page() {
     { title: 'Type & Layout', src: 'https://i.ibb.co/HLLcGkcS/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post.png' },
     { title: 'Retro Color', src: 'https://i.ibb.co/5tThs3V/huutsy-com-5.png' },
     { title: 'Minimal Lines', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
-    { title: 'Nature Motifs', src: 'img src="https://i.ibb.co/0jtLhZqk/huutsy-com-8.png' },
+    { title: 'Nature Motifs', src: 'https://i.ibb.co/0jtLhZqk/huutsy-com-8.png' },
     { title: 'Bold Graphics', src: 'https://i.ibb.co/93Vc78ZP/huutsy-com-6.png' },
     { title: 'Y2K Neon', src: 'https://i.ibb.co/j9vb0kt2/huutsy-com-7.png' },
+  ];
+
+  // images du bandeau (tu peux changer l'ordre/les URLs si tu veux)
+  const banner = [
+    'https://i.ibb.co/PG2j3VMH/Retro-Color-5.png',
+    'https://i.ibb.co/hJhZMR86/Retro-Color-4.png',
+    'https://i.ibb.co/7tqNcFrq/Retro-Color-2.png',
+    'https://i.ibb.co/3504Q9Sk/Retro-Color-3.png',
+    'https://i.ibb.co/gbxQD3g1/Retro-Color.png',
+    'https://i.ibb.co/Swrh75nS/Retro-Color-1.png',
   ];
 
   return (
@@ -54,7 +64,6 @@ export default function Page() {
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
-              {/* FIXED IMG TAG */}
               <img
                 src="https://i.ibb.co/j9pRY4Nr/Design-sans-titre-1.png"
                 alt="Huutsy hero"
@@ -102,19 +111,18 @@ export default function Page() {
       <section id="about" className="py-20 border-t border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold">About Huutsy</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">About huutsy</h2>
             <p className="mt-4 text-neutral-700 leading-relaxed">
-              	Huutsy is a dedicated design studio specialized in high-impact apparel graphics for on-demand printing platforms. 
-  		Every file is built with industry-standard dimensions, optimized color palettes, and perfect scaling to ensure 
-  		consistent, professional results across a wide range of garments. 
-  		Our approach blends creative trend research with technical precision, making sure each design is ready for 
-  		immediate upload and meets strict print requirements from day one.
+              huutsy is a dedicated design studio specialized in high-impact apparel graphics for on-demand printing platforms.
+              Every file is built with industry-standard dimensions, optimized color palettes, and perfect scaling to ensure
+              consistent, professional results across a wide range of garments. Our approach blends creative trend research
+              with technical precision, making sure each design is ready for immediate upload and meets strict print requirements from day one.
             </p>
             <ul className="mt-6 space-y-2 text-neutral-700 text-sm list-disc pl-5">
-		<li>Deliverables: 4500×5400 px PNG (transparent) / Vector (SVG, AI) on request</li>
-  		<li>Files tested for clarity, contrast, and compliance with content guidelines</li>
-  		<li>Lifestyle & flat mockups included for instant listing visuals</li>
-  		<li>Commercial license with full rights for resale on approved marketplaces</li>
+              <li>Deliverables: 4500×5400 px PNG (transparent) / Vector (SVG, AI) on request</li>
+              <li>Files tested for clarity, contrast, and compliance with content guidelines</li>
+              <li>Lifestyle & flat mockups included for instant listing visuals</li>
+              <li>Commercial license with full rights for resale on approved marketplaces</li>
             </ul>
           </div>
           <div className="p-6 rounded-3xl border bg-neutral-50">
@@ -129,6 +137,37 @@ export default function Page() {
               <a href="#contact" className="inline-block rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">Start a project</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Banner animé de 6 images */}
+      <section className="py-10 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: { opacity: 1, transition: { staggerChildren: 0.08 } },
+            }}
+          >
+            {banner.map((src, i) => (
+              <motion.img
+                key={i}
+                src={src}
+                alt={`Banner design ${i + 1}`}
+                className="w-full h-28 sm:h-32 object-cover rounded-xl shadow"
+                variants={{
+                  hidden: { opacity: 0, y: 12, scale: 0.98 },
+                  show: { opacity: 1, y: 0, scale: 1 },
+                }}
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: 'spring', stiffness: 220, damping: 20 }}
+              />
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -157,13 +196,13 @@ export default function Page() {
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
             <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
-          <p className="mt-6 text-xs text-neutral-500">Huutsy • All rights reserved</p>
+          <p className="mt-6 text-xs text-neutral-500">huutsy • All rights reserved</p>
         </div>
       </section>
 
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
-          <p>© {new Date().getFullYear()} Huutsy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} huutsy. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:opacity-70">Privacy</a>
             <a href="#" className="hover:opacity-70">Terms</a>
