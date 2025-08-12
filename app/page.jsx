@@ -12,10 +12,10 @@ export default function Page() {
   const shots = [
     { title: 'Type & Layout', src: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop' },
     { title: 'Retro Color', src: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1600&auto=format&fit=crop' },
-    { title: 'Minimal Lines', src: 'https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1600&auto=format&fit=crop' },
-    { title: 'Nature Motifs', src: 'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop' },
-    { title: 'Bold Graphics', src: 'https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?q=80&w=1600&auto=format&fit=crop' },
-    { title: 'Y2K Neon', src: 'https://images.unsplash.com/photo-1554232456-8727aae0cfa4?q=80&w=1600&auto=format&fit=crop' },
+    { title: 'Minimal Lines', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
+    { title: 'Nature Motifs', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png" alt="huutsy-com-6' },
+    { title: 'Bold Graphics', src: 'https://i.ibb.co/YBDTycZw/huutsy-com-3.png" alt="huutsy-com-3' },
+    { title: 'Y2K Neon', src: 'https://i.ibb.co/3mKN50qf/huutsy-com-1.png" alt="huutsy-com-1' },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Page() {
           </motion.div>
           <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1520975922323-c73521d2edc6?q=80&w=1600&auto=format&fit=crop" alt="Huutsy hero" className="w-full h-full object-cover"/>
+              <img src="<a href="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png" alt="Design-sans-titre" border="0"></a>" alt="Huutsy hero" className="w-full h-full object-cover"/>
             </div>
           </motion.div>
         </div>
