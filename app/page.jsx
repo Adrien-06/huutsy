@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function Page() {
   const features = [
-    { title: 'Original Artwork', desc: 'Concepts crafted in‑house, from sketch to final master. No stock art.' },
-    { title: 'Print‑Perfect Files', desc: '4500×5400 PNG with transparent background. Vector/SVG on request.' },
-    { title: 'Brand‑Ready Delivery', desc: 'Mockups, export presets, and a simple commercial license.' },
+    { title: 'Original Artwork', desc: 'Concepts crafted in-house, from sketch to final master. No stock art.' },
+    { title: 'Print-Perfect Files', desc: '4500×5400 PNG with transparent background. Vector/SVG on request.' },
+    { title: 'Brand-Ready Delivery', desc: 'Mockups, export presets, and a simple commercial license.' },
   ];
 
   const shots = [
@@ -37,13 +37,13 @@ export default function Page() {
       {/* Hero */}
       <section id="home" className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.6}}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Modern T‑Shirt Design Studio
+              Modern T-Shirt Design Studio
             </h1>
             <p className="mt-5 text-neutral-600 text-lg">
-              Huutsy is a creative studio crafting original, print‑ready graphics for apparel brands and
-              print‑on‑demand projects. From clean type to bold illustrations, we deliver files that look as good
+              Huutsy is a creative studio crafting original, print-ready graphics for apparel brands and
+              print-on-demand projects. From clean type to bold illustrations, we deliver files that look as good
               on fabric as they do on screen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -52,9 +52,14 @@ export default function Page() {
             </div>
             <p className="mt-4 text-sm text-neutral-500">24–48h previews • EN/FR/ES support</p>
           </motion.div>
-          <motion.div initial={{opacity:0, scale:0.98}} animate={{opacity:1, scale:1}} transition={{duration:0.6, delay:0.1}} className="relative">
+          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="relative">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
-              <img src="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png" alt="Design-sans-titre" border="0"></a>" alt="Huutsy hero" className="w-full h-full object-cover"/>
+              {/* FIXED IMG TAG */}
+              <img
+                src="https://i.ibb.co/XZnyj6wf/Design-sans-titre-1.png"
+                alt="Huutsy hero"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>
@@ -64,7 +69,7 @@ export default function Page() {
       <section className="py-14 md:py-16 border-t border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6">
           {features.map((f, i) => (
-            <motion.div key={i} initial={{opacity:0, y:10}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.4, delay:i*0.05}} className="p-6 rounded-3xl border bg-neutral-50">
+            <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }} className="p-6 rounded-3xl border bg-neutral-50">
               <h3 className="font-semibold text-lg">{f.title}</h3>
               <p className="mt-2 text-sm text-neutral-600">{f.desc}</p>
             </motion.div>
@@ -81,11 +86,11 @@ export default function Page() {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {shots.map((p, i) => (
-              <motion.figure key={i} initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}} transition={{duration:0.5, delay:i*0.03}} className="group overflow-hidden rounded-3xl border bg-white">
-                <img src={p.src} alt={p.title} className="w-full h-64 object-cover group-hover:scale-105 transition"/>
+              <motion.figure key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.03 }} className="group overflow-hidden rounded-3xl border bg-white">
+                <img src={p.src} alt={p.title} className="w-full h-64 object-cover group-hover:scale-105 transition" />
                 <figcaption className="p-3 text-sm text-neutral-600 flex items-center justify-between">
                   <span>{p.title}</span>
-                  <span className="opacity-60">Print‑ready</span>
+                  <span className="opacity-60">Print-ready</span>
                 </figcaption>
               </motion.figure>
             ))}
@@ -111,7 +116,7 @@ export default function Page() {
           <div className="p-6 rounded-3xl border bg-neutral-50">
             <h3 className="font-semibold">Services</h3>
             <ul className="mt-3 text-sm text-neutral-700 space-y-2">
-              <li>• 10‑design starter packs</li>
+              <li>• 10-design starter packs</li>
               <li>• Logo refresh & vectorization</li>
               <li>• Listing copy & keyword audit</li>
               <li>• Art direction for collections</li>
@@ -128,9 +133,9 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold">Process in 4 steps</h2>
           <ol className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-            {["Brief & niches","Moodboard & directions","Design & print checks","Delivery & mockups"].map((step, i) => (
+            {['Brief & niches', 'Moodboard & directions', 'Design & print checks', 'Delivery & mockups'].map((step, i) => (
               <li key={i} className="p-5 rounded-3xl border bg-white">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center font-semibold mb-3">{i+1}</div>
+                <div className="w-8 h-8 rounded-full border flex items-center justify-center font-semibold mb-3">{i + 1}</div>
                 <p className="text-neutral-700">{step}</p>
               </li>
             ))}
@@ -144,8 +149,9 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
           <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href="mailto:contact@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">support@huutsy.com</a>
+            <a href="mailto:contact@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">contact@huutsy.com</a>
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
+            <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
           <p className="mt-6 text-xs text-neutral-500">Huutsy • All rights reserved</p>
         </div>
