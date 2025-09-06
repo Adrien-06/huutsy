@@ -192,7 +192,7 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
           <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href="mailto:contact@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">contact@huutsy.com</a>
+            <a href="mailto:info@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">info@huutsy.com</a>
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
             <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
