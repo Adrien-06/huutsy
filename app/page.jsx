@@ -10,12 +10,12 @@ export default function Page() {
   ];
 
   const shots = [
-    { title: 'Type & Layout', src: 'https://i.ibb.co/7NKFNZFb/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-6.png' },
-    { title: 'Pastel Landscape', src: 'https://i.ibb.co/JF75rYXm/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-1.png' },
-    { title: 'Peace Hand', src: 'https://i.ibb.co/XZK32NCL/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-2.png' },
-    { title: 'Pixel Cross', src: 'https://i.ibb.co/4nx9Fqw7/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-3.png' },
-    { title: 'Color Splash Bucket', src: 'https://i.ibb.co/8nqQBwfs/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-5.png' },
-    { title: 'Retro Rainbow', src: 'https://i.ibb.co/Rkb1NWvJ/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-4.png' },
+    { title: 'Splash of Color', src: 'https://i.ibb.co/7NKFNZFb/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-6.png' },
+    { title: 'Vivid Peace', src: 'https://i.ibb.co/JF75rYXm/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-1.png' },
+    { title: 'Retro Rainbow', src: 'https://i.ibb.co/XZK32NCL/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-2.png' },
+    { title: 'Electric Pop', src: 'https://i.ibb.co/4nx9Fqw7/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-3.png' },
+    { title: 'Pastel Vibes', src: 'https://i.ibb.co/8nqQBwfs/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-5.png' },
+    { title: 'Bold Geometry', src: 'https://i.ibb.co/Rkb1NWvJ/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-4.png' },
   ];
 
   // images du bandeau (tu peux changer l'ordre/les URLs si tu veux)
