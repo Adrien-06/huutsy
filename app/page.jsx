@@ -11,7 +11,7 @@ export default function Page() {
 
   const shots = [
     { title: 'Type & Layout', src: 'https://i.ibb.co/HLLcGkcS/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post.png' },
-    { title: 'Pastel Landscape', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
+    { title: 'Pastel Landscape', src: 'https://i.ibb.co/hJhZMR86/Retro-Color-4.png' },
     { title: 'Peace Hand', src: 'https://i.ibb.co/7tqNcFrq/Retro-Color-2.png' },
     { title: 'Pixel Cross', src: 'https://i.ibb.co/3504Q9Sk/Retro-Color-3.png' },
     { title: 'Color Splash Bucket', src: 'https://i.ibb.co/gbxQD3g1/Retro-Color.png' },
