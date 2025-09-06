@@ -10,12 +10,12 @@ export default function Page() {
   ];
 
   const shots = [
-    { title: 'Type & Layout', src: 'https://i.ibb.co/HLLcGkcS/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post.png' },
-    { title: 'Pastel Landscape', src: 'https://i.ibb.co/hJhZMR86/Retro-Color-4.png' },
-    { title: 'Peace Hand', src: 'https://i.ibb.co/7tqNcFrq/Retro-Color-2.png' },
-    { title: 'Pixel Cross', src: 'https://i.ibb.co/3504Q9Sk/Retro-Color-3.png' },
-    { title: 'Color Splash Bucket', src: 'https://i.ibb.co/gbxQD3g1/Retro-Color.png' },
-    { title: 'Retro Rainbow', src: 'https://i.ibb.co/Swrh75nS/Retro-Color-1.png' },
+    { title: 'Type & Layout', src: 'https://i.ibb.co/7NKFNZFb/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-6.png' },
+    { title: 'Pastel Landscape', src: 'https://i.ibb.co/JF75rYXm/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-1.png' },
+    { title: 'Peace Hand', src: 'https://i.ibb.co/XZK32NCL/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-2.png' },
+    { title: 'Pixel Cross', src: 'https://i.ibb.co/4nx9Fqw7/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-3.png' },
+    { title: 'Color Splash Bucket', src: 'https://i.ibb.co/8nqQBwfs/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-5.png' },
+    { title: 'Retro Rainbow', src: 'https://i.ibb.co/Rkb1NWvJ/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-4.png' },
   ];
 
   // images du bandeau (tu peux changer l'ordre/les URLs si tu veux)
