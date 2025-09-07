@@ -3,10 +3,11 @@
 import { motion } from 'framer-motion';
 
 export default function Page() {
+  // Studio pillars (short + confident)
   const features = [
-    { title: 'Original Artwork', desc: 'Concepts crafted in-house, from sketch to final master. No stock art.' },
-    { title: 'Print-Perfect Files', desc: '4500×5400 PNG with transparent background. Vector/SVG on request.' },
-    { title: 'Brand-Ready Delivery', desc: 'Mockups, export presets, and a simple commercial license.' },
+    { title: 'Original Artwork', desc: 'Built in-house from sketch to master. No stock.' },
+    { title: 'Print-Perfect Files', desc: '4500×5400 PNG (transparent). Vector/SVG on request.' },
+    { title: 'Brand-Ready', desc: 'Mockups, export presets and simple licensing.' },
   ];
 
   const shots = [
@@ -18,7 +19,7 @@ export default function Page() {
     { title: 'Bold Geometry', src: 'https://i.ibb.co/Rkb1NWvJ/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-4.png' },
   ];
 
-  // images du bandeau (tu peux changer l'ordre/les URLs si tu veux)
+  // marquee banner
   const banner = [
     'https://i.ibb.co/PG2j3VMH/Retro-Color-5.png',
     'https://i.ibb.co/hJhZMR86/Retro-Color-4.png',
@@ -28,77 +29,137 @@ export default function Page() {
     'https://i.ibb.co/Swrh75nS/Retro-Color-1.png',
   ];
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 16 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+  };
+
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
-      {/* Nav */}
-      <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-neutral-200">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#home" className="font-black tracking-tight text-2xl">huutsy</a>
-          <nav className="hidden md:flex gap-6 text-sm">
+      {/* NAV */}
+      <header className="sticky top-0 z-40 border-b border-neutral-200/70 bg-white/70 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+          <a href="#home" className="text-xl font-black tracking-tight">huutsy</a>
+          <nav className="hidden items-center gap-6 text-sm md:flex">
             <a href="#work" className="hover:opacity-70">Work</a>
             <a href="#about" className="hover:opacity-70">About</a>
             <a href="#process" className="hover:opacity-70">Process</a>
             <a href="#contact" className="hover:opacity-70">Contact</a>
           </nav>
-          <a href="#contact" className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-neutral-900 hover:bg-neutral-900 hover:text-white transition text-sm">Get in touch</a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-900 px-4 py-2 text-sm transition hover:bg-neutral-900 hover:text-white"
+          >
+            Get in touch
+          </a>
         </div>
       </header>
 
-      {/* Hero */}
+      {/* HERO */}
       <section id="home" className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Modern T-Shirt Design Studio
-            </h1>
-            <p className="mt-5 text-neutral-600 text-lg">
-              huutsy is a creative studio crafting original, print-ready graphics for apparel brands and
-              print-on-demand projects. From clean type to bold illustrations, we deliver files that look as good
-              on fabric as they do on screen.
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:grid-cols-2 md:py-28">
+          <motion.div initial="hidden" animate="show" variants={fadeUp}>
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1 text-xs uppercase tracking-wide text-neutral-600">
+              Apparel Graphics Studio
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#work" className="rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">See portfolio</a>
-              <a href="#contact" className="rounded-2xl px-5 py-3 border border-neutral-900 hover:bg-neutral-900 hover:text-white">Request a quote</a>
+            <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">
+              Print-ready design with a brand point of view.
+            </h1>
+            <p className="mt-5 text-lg text-neutral-600">
+              We craft original graphics for apparel and on-demand platforms—clean type, bold color, and clear
+              detail that holds up on fabric.
+            </p>
+
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                href="#work"
+                className="rounded-full bg-neutral-900 px-5 py-3 text-white transition hover:opacity-90"
+              >
+                See portfolio
+              </a>
+              <a
+                href="#contact"
+                className="rounded-full border border-neutral-900 px-5 py-3 transition hover:bg-neutral-900 hover:text-white"
+              >
+                Request a quote
+              </a>
             </div>
-            <p className="mt-4 text-sm text-neutral-500">24–48h previews • EN/FR/ES support</p>
+
+            <div className="mt-4 flex items-center gap-3 text-sm text-neutral-500">
+              <span className="inline-block h-1 w-1 rounded-full bg-neutral-400" />
+              24–48h previews
+              <span className="inline-block h-1 w-1 rounded-full bg-neutral-400" />
+              EN / FR / ES support
+            </div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }} className="relative">
-            <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-xl">
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative"
+          >
+            <div className="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
               <img
                 src="https://i.ibb.co/j9pRY4Nr/Design-sans-titre-1.png"
                 alt="Huutsy hero"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-14 md:py-16 border-t border-neutral-200 bg-white">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+      {/* PILLARS */}
+      <section className="border-t border-neutral-200 bg-white py-12 md:py-14">
+        <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3">
           {features.map((f, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }} className="p-6 rounded-3xl border bg-neutral-50">
-              <h3 className="font-semibold text-lg">{f.title}</h3>
+            <motion.div
+              key={i}
+              className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+            >
+              <div className="mb-2 text-xs uppercase tracking-wide text-neutral-500">Pillar {i + 1}</div>
+              <h3 className="text-lg font-semibold">{f.title}</h3>
               <p className="mt-2 text-sm text-neutral-600">{f.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Portfolio */}
-      <section id="work" className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-end justify-between mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Selected Work</h2>
+      {/* WORK */}
+      <section id="work" className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-6 flex items-end justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-neutral-500">Selected Work</p>
+              <h2 className="text-3xl font-bold md:text-4xl">Recent studies & drops</h2>
+            </div>
             <a href="#contact" className="text-sm underline underline-offset-4">Request similar designs</a>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {shots.map((p, i) => (
-              <motion.figure key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.03 }} className="group overflow-hidden rounded-3xl border bg-white">
-                <img src={p.src} alt={p.title} className="w-full h-64 object-cover group-hover:scale-105 transition" />
-                <figcaption className="p-3 text-sm text-neutral-600 flex items-center justify-between">
-                  <span>{p.title}</span>
+              <motion.figure
+                key={i}
+                className="group overflow-hidden rounded-3xl border bg-white"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.04 }}
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={p.src}
+                    alt={p.title}
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+                <figcaption className="flex items-center justify-between p-3 text-sm text-neutral-700">
+                  <span className="font-medium">{p.title}</span>
                   <span className="opacity-60">Print-ready</span>
                 </figcaption>
               </motion.figure>
@@ -107,105 +168,136 @@ export default function Page() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-20 border-t border-neutral-200 bg-white">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      {/* ABOUT */}
+      <section id="about" className="border-t border-neutral-200 bg-white py-16">
+        <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold">About huutsy</h2>
-            <p className="mt-4 text-neutral-700 leading-relaxed">
-              huutsy is a dedicated design studio specialized in high-impact apparel graphics for on-demand printing platforms.
-              Every file is built with industry-standard dimensions, optimized color palettes, and perfect scaling to ensure
-              consistent, professional results across a wide range of garments. Our approach blends creative trend research
-              with technical precision, making sure each design is ready for immediate upload and meets strict print requirements from day one.
+            <p className="text-xs uppercase tracking-wide text-neutral-500">About</p>
+            <h3 className="mt-1 text-3xl font-bold md:text-4xl">Huutsy, a design studio for apparel</h3>
+            <p className="mt-4 leading-relaxed text-neutral-700">
+              We specialize in high-impact graphics for on-demand printing. Files follow industry dimensions,
+              optimized palettes and clear scaling, so the result stays crisp on fabric. We combine trend research
+              with technical checks to ship artwork that’s upload-ready from day one.
             </p>
-            <ul className="mt-6 space-y-2 text-neutral-700 text-sm list-disc pl-5">
-              <li>Deliverables: 4500×5400 px PNG (transparent) / Vector (SVG, AI) on request</li>
-              <li>Files tested for clarity, contrast, and compliance with content guidelines</li>
-              <li>Lifestyle & flat mockups included for instant listing visuals</li>
-              <li>Commercial license with full rights for resale on approved marketplaces</li>
+            <ul className="mt-6 space-y-2 pl-5 text-sm text-neutral-700">
+              <li className="list-disc">4500×5400 PNG (transparent) • Vector (SVG/AI) on request</li>
+              <li className="list-disc">Files tested for clarity, contrast & content compliance</li>
+              <li className="list-disc">Lifestyle + flat mockups included for instant listings</li>
+              <li className="list-disc">Straightforward commercial license</li>
             </ul>
           </div>
-          <div className="p-6 rounded-3xl border bg-neutral-50">
-            <h3 className="font-semibold">Services</h3>
-            <ul className="mt-3 text-sm text-neutral-700 space-y-2">
-              <li>• 10-design starter packs</li>
-              <li>• Logo refresh & vectorization</li>
-              <li>• Listing copy & keyword audit</li>
-              <li>• Art direction for collections</li>
-            </ul>
+
+          <div className="rounded-3xl border bg-neutral-50 p-6">
+            <h4 className="font-semibold">Services</h4>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['10-design starter packs', 'Logo refresh & vectorization', 'Listing copy & keyword audit', 'Art direction for collections'].map(
+                (chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700"
+                  >
+                    {chip}
+                  </span>
+                ),
+              )}
+            </div>
             <div className="mt-6">
-              <a href="#contact" className="inline-block rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:opacity-90">Start a project</a>
+              <a
+                href="#contact"
+                className="inline-block rounded-full bg-neutral-900 px-5 py-3 text-white transition hover:opacity-90"
+              >
+                Start a project
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Banner animé de 6 images */}
-      <section className="py-10 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* LOOPING MARQUEE (subtle) */}
+      <section className="bg-white py-10">
+        <div className="mx-auto max-w-6xl overflow-hidden px-4">
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              hidden: { opacity: 0 },
-              show: { opacity: 1, transition: { staggerChildren: 0.08 } },
-            }}
+            className="flex gap-4"
+            initial={{ x: 0 }}
+            whileInView={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 18, ease: 'linear', repeat: Infinity }}
           >
-            {banner.map((src, i) => (
-              <motion.img
-                key={i}
-                src={src}
-                alt={`Banner design ${i + 1}`}
-                className="w-full h-28 sm:h-32 object-cover rounded-xl shadow"
-                variants={{
-                  hidden: { opacity: 0, y: 12, scale: 0.98 },
-                  show: { opacity: 1, y: 0, scale: 1 },
-                }}
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: 'spring', stiffness: 220, damping: 20 }}
-              />
+            {[...banner, ...banner].map((src, i) => (
+              <div key={i} className="shrink-0">
+                <img
+                  src={src}
+                  alt={`Banner ${i + 1}`}
+                  className="h-28 w-[220px] rounded-xl object-cover shadow-sm sm:h-32 sm:w-[260px]"
+                />
+              </div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Process */}
-      <section id="process" className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Process in 4 steps</h2>
-          <ol className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-            {['Brief & niches', 'Moodboard & directions', 'Design & print checks', 'Delivery & mockups'].map((step, i) => (
-              <li key={i} className="p-5 rounded-3xl border bg-white">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center font-semibold mb-3">{i + 1}</div>
-                <p className="text-neutral-700">{step}</p>
-              </li>
-            ))}
+      {/* PROCESS */}
+      <section id="process" className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <p className="text-xs uppercase tracking-wide text-neutral-500">Process</p>
+          <h4 className="mt-1 text-3xl font-bold md:text-4xl">From brief to upload-ready</h4>
+
+          <ol className="mt-6 grid gap-4 text-sm md:grid-cols-4">
+            {['Brief & niches', 'Moodboard & directions', 'Design & print checks', 'Delivery & mockups'].map(
+              (step, i) => (
+                <li key={i} className="rounded-3xl border bg-white p-5">
+                  <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full border font-semibold">
+                    {i + 1}
+                  </div>
+                  <p className="text-neutral-700">{step}</p>
+                </li>
+              ),
+            )}
           </ol>
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-20 border-t border-neutral-200 bg-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
+      {/* CONTACT */}
+      <section id="contact" className="border-t border-neutral-200 bg-white py-16">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <h5 className="text-3xl font-bold md:text-4xl">Let’s work together ✉️</h5>
           <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
+
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href="mailto:sales@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">sales@huutsy.com</a>
-            <a href="https://www.instagram.com/studio_huutsy/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
-            <a href="https://www.behance.net/huutsy" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
+            <a
+              href="mailto:sales@huutsy.com"
+              className="rounded-2xl border p-4 transition hover:bg-neutral-900 hover:text-white"
+            >
+              sales@huutsy.com
+            </a>
+            <a
+              href="https://www.instagram.com/studio_huutsy/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-2xl border p-4 transition hover:bg-neutral-900 hover:text-white"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.behance.net/huutsy"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-2xl border p-4 transition hover:bg-neutral-900 hover:text-white"
+            >
+              Behance
+            </a>
           </div>
+
           <p className="mt-6 text-xs text-neutral-500">huutsy • All rights reserved</p>
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="py-10">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-neutral-600 md:flex-row">
           <p>© {new Date().getFullYear()} huutsy. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-70">SAS 2MANNECY</a>
-            <a href="#" className="hover:opacity-70">RCS 882337801</a>
+            <span className="opacity-70">SAS 2MANNECY</span>
+            <span className="opacity-70">RCS 882337801</span>
           </div>
         </div>
       </footer>

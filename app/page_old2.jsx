@@ -10,12 +10,12 @@ export default function Page() {
   ];
 
   const shots = [
-    { title: 'Splash of Color', src: 'https://i.ibb.co/7NKFNZFb/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-6.png' },
-    { title: 'Vivid Peace', src: 'https://i.ibb.co/JF75rYXm/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-1.png' },
-    { title: 'Retro Rainbow', src: 'https://i.ibb.co/XZK32NCL/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-2.png' },
-    { title: 'Electric Pop', src: 'https://i.ibb.co/4nx9Fqw7/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-3.png' },
-    { title: 'Pastel Vibes', src: 'https://i.ibb.co/8nqQBwfs/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-5.png' },
-    { title: 'Bold Geometry', src: 'https://i.ibb.co/Rkb1NWvJ/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post-4.png' },
+    { title: 'Type & Layout', src: 'https://i.ibb.co/HLLcGkcS/Black-and-White-Minimalist-T-Shirt-Mockup-Instagram-Post.png' },
+    { title: 'Retro Color', src: 'https://i.ibb.co/5tThs3V/huutsy-com-5.png' },
+    { title: 'Minimal Lines', src: 'https://i.ibb.co/k26Tdt3K/huutsy-com-4.png' },
+    { title: 'Nature Motifs', src: 'https://i.ibb.co/0jtLhZqk/huutsy-com-8.png' },
+    { title: 'Bold Graphics', src: 'https://i.ibb.co/93Vc78ZP/huutsy-com-6.png' },
+    { title: 'Y2K Neon', src: 'https://i.ibb.co/j9vb0kt2/huutsy-com-7.png' },
   ];
 
   // images du bandeau (tu peux changer l'ordre/les URLs si tu veux)
@@ -192,9 +192,9 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-bold">Let’s work together ✉️</h2>
           <p className="mt-4 text-neutral-700">Tell us what you want to create and we’ll reply within 24–48h.</p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <a href="mailto:sales@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">sales@huutsy.com</a>
-            <a href="https://www.instagram.com/studio_huutsy/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
-            <a href="https://www.behance.net/huutsy" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
+            <a href="mailto:info@huutsy.com" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">info@huutsy.com</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Instagram</a>
+            <a href="https://www.behance.net/" target="_blank" rel="noreferrer" className="rounded-2xl border p-4 hover:bg-neutral-900 hover:text-white transition">Behance</a>
           </div>
           <p className="mt-6 text-xs text-neutral-500">huutsy • All rights reserved</p>
         </div>
@@ -204,8 +204,8 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600">
           <p>© {new Date().getFullYear()} huutsy. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-70">SAS 2MANNECY</a>
-            <a href="#" className="hover:opacity-70">RCS 882337801</a>
+            <a href="#" className="hover:opacity-70">Privacy</a>
+            <a href="#" className="hover:opacity-70">Terms</a>
           </div>
         </div>
       </footer>
