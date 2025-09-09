@@ -229,9 +229,9 @@ export default function Page() {
           <div className="grid gap-4 md:grid-cols-3">
             {/* Tip: if a ibb.co URL doesn’t render, replace with its direct i.ibb.co/... image URL */}
             {[
-              { href: 'https://ibb.co/FqB0sS97', src: 'https://ibb.co/FqB0sS97', alt: 'Huutsy Studio view 1' },
-              { href: 'https://ibb.co/YFCmVM1F', src: 'https://ibb.co/YFCmVM1F', alt: 'Huutsy Studio view 2' },
-              { href: 'https://ibb.co/q8TwDjf',  src: 'https://ibb.co/q8TwDjf',  alt: 'Huutsy Studio view 3' },
+              { href: 'https://i.ibb.co/xqWk4LfW/3-1.png', src: 'https://i.ibb.co/xqWk4LfW/3-1.png', alt: 'Huutsy Studio view 1' },
+              { href: 'https://i.ibb.co/qFRW0tz1/5-1.png', src: 'https://i.ibb.co/qFRW0tz1/5-1.png', alt: 'Huutsy Studio view 2' },
+              { href: 'https://i.ibb.co/whrZDMfc/6-1.png',  src: 'https://i.ibb.co/whrZDMfc/6-1.png',  alt: 'Huutsy Studio view 3' },
             ].map((img, i) => (
               <motion.a
                 key={i}
