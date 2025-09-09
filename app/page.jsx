@@ -221,8 +221,8 @@ export default function Page() {
             <p className="text-xs uppercase tracking-wide text-neutral-500">Studio</p>
             <h3 className="mt-1 text-3xl font-bold md:text-4xl">Inside the studio</h3>
             <p className="mt-4 max-w-2xl text-neutral-700">
-              Clean, minimal, and built for flow—our space mirrors our work: clarity first with bold accents.
-              From concept sprints to pre-press checks, everything happens here.
+              Our studio is a vibrant and inspiring space where creativity meets precision. Surrounded by bold art, plants, and clean work zones, it’s designed to foster both experimentation and focus. 
+              Every corner reflects our philosophy: colorful ideas, structured processes, and a professional flow from sketch to final artwork.
             </p>
           </div>
 
@@ -253,7 +253,7 @@ export default function Page() {
                 </div>
                 <div className="flex items-center justify-between p-3 text-sm text-neutral-700">
                   <span className="font-medium">Workspace {i + 1}</span>
-                  <span className="opacity-60">Open in new tab</span>
+                  <span className="opacity-60"> </span>
                 </div>
               </motion.a>
             ))}
