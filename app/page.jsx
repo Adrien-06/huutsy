@@ -43,6 +43,7 @@ export default function Page() {
           <nav className="hidden items-center gap-6 text-sm md:flex">
             <a href="#work" className="hover:opacity-70">Work</a>
             <a href="#about" className="hover:opacity-70">About</a>
+            <a href="#studio" className="hover:opacity-70">Studio</a>
             <a href="#process" className="hover:opacity-70">Process</a>
             <a href="#contact" className="hover:opacity-70">Contact</a>
           </nav>
@@ -213,7 +214,54 @@ export default function Page() {
         </div>
       </section>
 
-      {/* LOOPING MARQUEE (subtle) */}
+      {/* STUDIO (Behance-style) */}
+      <section id="studio" className="border-t border-neutral-200 bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <p className="text-xs uppercase tracking-wide text-neutral-500">Studio</p>
+            <h3 className="mt-1 text-3xl font-bold md:text-4xl">Inside the studio</h3>
+            <p className="mt-4 max-w-2xl text-neutral-700">
+              Clean, minimal, and built for flow—our space mirrors our work: clarity first with bold accents.
+              From concept sprints to pre-press checks, everything happens here.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {/* Tip: if a ibb.co URL doesn’t render, replace with its direct i.ibb.co/... image URL */}
+            {[
+              { href: 'https://ibb.co/FqB0sS97', src: 'https://ibb.co/FqB0sS97', alt: 'Huutsy Studio view 1' },
+              { href: 'https://ibb.co/YFCmVM1F', src: 'https://ibb.co/YFCmVM1F', alt: 'Huutsy Studio view 2' },
+              { href: 'https://ibb.co/q8TwDjf',  src: 'https://ibb.co/q8TwDjf',  alt: 'Huutsy Studio view 3' },
+            ].map((img, i) => (
+              <motion.a
+                key={i}
+                href={img.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-3xl border bg-white"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: i * 0.05 }}
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="flex items-center justify-between p-3 text-sm text-neutral-700">
+                  <span className="font-medium">Workspace {i + 1}</span>
+                  <span className="opacity-60">Open in new tab</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LOOPING MARQUEE */}
       <section className="bg-white py-10">
         <div className="mx-auto max-w-6xl overflow-hidden px-4">
           <motion.div
